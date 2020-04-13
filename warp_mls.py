@@ -136,8 +136,14 @@ class WarpMLS:
                 nxi1 = np.array(np.ceil(nx), dtype=np.int32)
                 nyi1 = np.array(np.ceil(ny), dtype=np.int32)
 
-                dst[i:i + h, j:j + w] = self.__bilinear_interp(np.tile(np.expand_dims(ny - nyi, axis=-1), (1, 1, 3)),
-                                                               np.tile(np.expand_dims(nx - nxi, axis=-1), (1, 1, 3)),
+                if len(self.src.shape) == 3:
+                    x = np.tile(np.expand_dims(ny - nyi, axis=-1), (1, 1, 3))
+                    y = np.tile(np.expand_dims(nx - nxi, axis=-1), (1, 1, 3))
+                else:
+                    x = ny - nyi
+                    y = nx - nxi
+                dst[i:i + h, j:j + w] = self.__bilinear_interp(x,
+                                                               y,
                                                                self.src[nyi, nxi],
                                                                self.src[nyi, nxi1],
                                                                self.src[nyi1, nxi],
