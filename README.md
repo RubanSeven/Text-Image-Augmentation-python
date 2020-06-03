@@ -2,11 +2,9 @@
 
 [![Build Status](https://travis-ci.org/Canjie-Luo/Text-Image-Augmentation.svg?branch=master)](https://travis-ci.org/Canjie-Luo/Text-Image-Augmentation)
 
-Geometric Augmentation for Text Image
+A general geometric augmentation tool for text images in the CVPR 2020 paper "Learn to Augment: Joint Data Augmentation and Network Optimization for Text Recognition". We provide the tool to avoid overfitting and gain robustness of text recognizers.
 
-A tool for scene text data augmentation. We provide the tool to avoid overfitting and gain robustness of models.
-
-We are now focusing on the shape of the cropped scene text image. 
+Note that this is a general toolkit. Please customize for your specific task. If the repo benefits your work, please cite the papers.
 
 ## Requirements
 
