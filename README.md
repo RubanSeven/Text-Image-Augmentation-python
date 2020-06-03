@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/Canjie-Luo/Text-Image-Augmentation.svg?branch=master)](https://travis-ci.org/Canjie-Luo/Text-Image-Augmentation)
 
+Geometric Augmentation for Text Image
+
 A tool for scene text data augmentation. We provide the tool to avoid overfitting and gain robustness of models.
 
 We are now focusing on the shape of the cropped scene text image. 
